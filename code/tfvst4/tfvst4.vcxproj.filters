@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="vstsdk">
+      <UniqueIdentifier>{1781e1c0-f8ba-4782-bd26-23d84b071197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsti">
+      <UniqueIdentifier>{dc8fd5cf-e266-4c5f-bc46-709ca2e5daf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared">
+      <UniqueIdentifier>{7f4bc5b5-6846-4089-9121-b04cd26dea69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qtcreated">
+      <UniqueIdentifier>{7d8c014b-d4c0-4ec8-a436-a1155e1bbc13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\system">
+      <UniqueIdentifier>{f243fc2b-c50e-4862-b133-3136bc743d01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\synth">
+      <UniqueIdentifier>{028551bb-1652-466d-88e1-2bd013e35b13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{d789f432-86d0-44a6-b184-54a150b8d5ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qt_winmigrate">
+      <UniqueIdentifier>{df2d6f96-dbd1-437a-90d2-b0f2e2509db2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vstsdk\AEffect.h">
+      <Filter>vstsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="vstsdk\aeffectx.h">
+      <Filter>vstsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="vstsdk\AEffEditor.hpp">
+      <Filter>vstsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="vstsdk\AudioEffect.hpp">
+      <Filter>vstsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="vstsdk\audioeffectx.h">
+      <Filter>vstsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\tfvsti.hpp">
+      <Filter>vsti</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\types.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\array.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\color.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\profiler.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\runtime.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\system.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\timer.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\point.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\rect.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\threading.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\synth\tf4.hpp">
+      <Filter>eshared\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\synth\tf4fx.hpp">
+      <Filter>eshared\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\tfeditor.hpp">
+      <Filter>vsti</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\ui_tfwindow.hpp">
+      <Filter>qtcreated</Filter>
+    </ClInclude>
+    <ClInclude Include="qt_winmigrate\qmfcapp.h">
+      <Filter>qt_winmigrate</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\ui_tfmanage.hpp">
+      <Filter>qtcreated</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\tfvstsynth.hpp">
+      <Filter>vsti</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\tfrecorder.hpp">
+      <Filter>vsti</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\tfsynthprogram.hpp">
+      <Filter>vsti</Filter>
+    </ClInclude>
+    <ClInclude Include="vsti\tfhelpers.hpp">
+      <Filter>vsti</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\datastream.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\simd.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="vstsdk\AudioEffect.cpp">
+      <Filter>vstsdk</Filter>
+    </ClCompile>
+    <ClCompile Include="vstsdk\audioeffectx.cpp">
+      <Filter>vstsdk</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\main.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\array.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\color.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\profiler.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\runtime.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\timer.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\threading.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfdial.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\moc_tfdial.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\synth\tf4fx.cpp">
+      <Filter>eshared\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\synth\tf4.cpp">
+      <Filter>eshared\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tffreqview.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\moc_tffreqview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfrecorder.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfwindow.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfeditor.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\moc_tfwindow.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="qt_winmigrate\moc_qwinhost.cpp">
+      <Filter>qt_winmigrate</Filter>
+    </ClCompile>
+    <ClCompile Include="qt_winmigrate\qwinwidget.cpp">
+      <Filter>qt_winmigrate</Filter>
+    </ClCompile>
+    <ClCompile Include="qt_winmigrate\qwinhost.cpp">
+      <Filter>qt_winmigrate</Filter>
+    </ClCompile>
+    <ClCompile Include="qt_winmigrate\qmfcapp.cpp">
+      <Filter>qt_winmigrate</Filter>
+    </ClCompile>
+    <ClCompile Include="qt_winmigrate\moc_qwinwidget.cpp">
+      <Filter>qt_winmigrate</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfmanage.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\moc_tfmanage.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfvstsynth.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfsynthprogram.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="vsti\tfhelpers.cpp">
+      <Filter>vsti</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\datastream.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\qrc_resource.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\simd.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_User_Interface_Compiler Include="vsti\tfwindow.ui">
+      <Filter>vsti</Filter>
+    </Qt_User_Interface_Compiler>
+    <Qt_User_Interface_Compiler Include="vsti\tfmanage.ui">
+      <Filter>vsti</Filter>
+    </Qt_User_Interface_Compiler>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="vsti\tfdial.hpp">
+      <Filter>vsti</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vsti\tffreqview.hpp">
+      <Filter>vsti</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vsti\tfwindow.hpp">
+      <Filter>vsti</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vsti\tfmanage.hpp">
+      <Filter>vsti</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qt_winmigrate\qwinhost.h" />
+    <CustomBuild Include="qt_winmigrate\qwinwidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\border2.png">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="resources\style.css">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="resources\scrollbar.png">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="resources\border.png">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="resources\border3.png">
+      <Filter>resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_Resource_Compiler Include="resources\resource.qrc">
+      <Filter>resources</Filter>
+    </Qt_Resource_Compiler>
+  </ItemGroup>
+</Project>

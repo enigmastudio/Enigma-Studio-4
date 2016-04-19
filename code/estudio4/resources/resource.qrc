@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>estudio.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>skip_forward.png</file>
+        <file>pause.png</file>
+        <file>play.png</file>
+        <file>skip_backward.png</file>
+        <file>border.png</file>
+        <file>border2.png</file>
+        <file>border3.png</file>
+        <file>scrollbar.png</file>
+    </qresource>
+    <qresource prefix="/style">
+        <file>estudio4.css</file>
+        <file>estudio4_debug.css</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file>help.html</file>
+    </qresource>
+</RCC>

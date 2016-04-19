@@ -1,0 +1,1264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56A1DEFA-0CEB-4CDF-8E18-8A277636E604}</ProjectGuid>
+    <RootNamespace>estudio4</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\qt.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\binary\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</IntDir>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PreBuildEventUseInBuild>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\binary\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</IntDir>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PreBuildEventUseInBuild>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ExecutablePath)</ExecutablePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IncludePath);$(DXSDK_DIR)Include;$(QTDIR)\include;</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(LibraryPath);$(DXSDK_DIR)Lib\x86;$(QTDIR)\lib;</LibraryPath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ExecutablePath)</ExecutablePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DXSDK_DIR)Include;$(QTDIR)\include;$(IncludePath);</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DXSDK_DIR)Lib\x86;$(QTDIR)\lib;$(LibraryPath);</LibraryPath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;eDEBUG;eEDITOR;eUSE_PROFILER;eUSE_MMX;eUSE_SSE;eAUTO_SHADERS;QT_NO_KEYWORDS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;winmm.lib;dsound.lib;dxgi.lib;d3d11.lib;d3dcompiler.lib;imm32.lib;msimg32.lib;version.lib;ws2_32.lib;qwindowsd.lib;qt5platformsupportd.lib;qt5guid.lib;qt5cored.lib;qt5xmld.lib;qt5widgetsd.lib;qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <Profile>false</Profile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <FxCompile>
+      <ShaderModel>4.0</ShaderModel>
+      <HeaderFileOutput>%(RootDir)%(Directory)%(Filename).hpp</HeaderFileOutput>
+      <ObjectFileOutput>%(RootDir)%(Directory)%(Filename).cso</ObjectFileOutput>
+      <VariableName>%(Filename)</VariableName>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;eRELEASE;eUSE_PROFILER;eEDITOR;eUSE_MMX;eUSE_SSE;QT_NO_KEYWORDS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalOptions>/FC %(AdditionalOptions)</AdditionalOptions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;winmm.lib;imm32.lib;msimg32.lib;version.lib;ws2_32.lib;dsound.lib;dxgi.lib;d3d11.lib;d3dcompiler.lib;qwindows.lib;qt5platformsupport.lib;qt5gui.lib;qt5core.lib;qt5xml.lib;qt5widgets.lib;qtmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <SetChecksum>true</SetChecksum>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+    <FxCompile>
+      <ShaderModel>4.0</ShaderModel>
+      <VariableName>%(Filename)</VariableName>
+      <HeaderFileOutput>%(RootDir)%(Directory)%(Filename).hpp</HeaderFileOutput>
+      <ObjectFileOutput>%(RootDir)%(Directory)%(Filename).cso</ObjectFileOutput>
+      <AdditionalOptions>/Zpr /O3 /Qstrip_reflect /Qstrip_debug %(AdditionalOptions)</AdditionalOptions>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\eshared\engine\demo.cpp" />
+    <ClCompile Include="..\eshared\engine\engine.cpp" />
+    <ClCompile Include="..\eshared\engine\font.cpp" />
+    <ClCompile Include="..\eshared\engine\graphicsdx11.cpp" />
+    <ClCompile Include="..\eshared\engine\culler.cpp" />
+    <ClCompile Include="..\eshared\engine\light.cpp" />
+    <ClCompile Include="..\eshared\engine\scenedata.cpp" />
+    <ClCompile Include="..\eshared\engine\transfwidgets.cpp" />
+    <ClCompile Include="..\eshared\math\aabb.cpp" />
+    <ClCompile Include="..\eshared\math\matrix.cpp" />
+    <ClCompile Include="..\eshared\math\plane.cpp" />
+    <ClCompile Include="..\eshared\math\ray.cpp" />
+    <ClCompile Include="..\eshared\math\transform.cpp" />
+    <ClCompile Include="..\eshared\math\vector.cpp" />
+    <ClCompile Include="..\eshared\opstacking\demodata.cpp" />
+    <ClCompile Include="..\eshared\opstacking\effectops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\physicsops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\attractor.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\kdtree.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\rewritesystem.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\tinylsys3.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\tinylsys3ops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\turtleinterpreter.cpp" />
+    <ClCompile Include="..\eshared\opstacking\oppage.cpp" />
+    <ClCompile Include="..\eshared\opstacking\script.cpp" />
+    <ClCompile Include="..\eshared\packing\arith.cpp" />
+    <ClCompile Include="..\eshared\packing\bwt.cpp" />
+    <ClCompile Include="..\eshared\packing\mtf.cpp" />
+    <ClCompile Include="..\eshared\packing\rle.cpp" />
+    <ClCompile Include="..\eshared\synth\synth.cpp" />
+    <ClCompile Include="..\eshared\synth\tf4.cpp" />
+    <ClCompile Include="..\eshared\synth\tf4dx.cpp" />
+    <ClCompile Include="..\eshared\synth\tf4fx.cpp" />
+    <ClCompile Include="..\eshared\system\datastream.cpp" />
+    <ClCompile Include="..\eshared\system\file.cpp" />
+    <ClCompile Include="..\eshared\system\point.cpp" />
+    <ClCompile Include="..\eshared\system\rect.cpp" />
+    <ClCompile Include="..\eshared\system\simd.cpp" />
+    <ClCompile Include="..\eshared\system\string.cpp" />
+    <ClCompile Include="..\eshared\system\threading.cpp" />
+    <ClCompile Include="gui\addopdlg.cpp" />
+    <ClCompile Include="gui\demoseqview.cpp" />
+    <ClCompile Include="gui\findopdlg.cpp" />
+    <ClCompile Include="gui\linkopdlg.cpp" />
+    <ClCompile Include="gui\mainwnd.cpp" />
+    <ClCompile Include="gui\moc_demoseqview.cpp" />
+    <ClCompile Include="gui\moc_findopdlg.cpp" />
+    <ClCompile Include="gui\moc_paramview.cpp" />
+    <ClCompile Include="gui\moc_trackedit.cpp" />
+    <ClCompile Include="gui\pagetree.cpp" />
+    <ClCompile Include="gui\pageview.cpp" />
+    <ClCompile Include="gui\paramview.cpp" />
+    <ClCompile Include="gui\paramwidgets.cpp" />
+    <ClCompile Include="gui\pathview.cpp" />
+    <ClCompile Include="gui\renderview.cpp" />
+    <ClCompile Include="gui\timelineview.cpp" />
+    <ClCompile Include="..\eshared\math\quat.cpp" />
+    <ClCompile Include="..\eshared\system\array.cpp" />
+    <ClCompile Include="..\eshared\system\color.cpp" />
+    <ClCompile Include="..\eshared\system\profiler.cpp" />
+    <ClCompile Include="..\eshared\system\runtime.cpp">
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</WholeProgramOptimization>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\timer.cpp" />
+    <ClCompile Include="..\eshared\engine\camera.cpp" />
+    <ClCompile Include="..\eshared\engine\deferredrenderer.cpp" />
+    <ClCompile Include="..\eshared\engine\editmesh.cpp" />
+    <ClCompile Include="..\eshared\engine\effect.cpp" />
+    <ClCompile Include="..\eshared\engine\material.cpp" />
+    <ClCompile Include="..\eshared\engine\mesh.cpp" />
+    <ClCompile Include="..\eshared\engine\particlesys.cpp" />
+    <ClCompile Include="..\eshared\engine\path.cpp" />
+    <ClCompile Include="..\eshared\engine\renderjob.cpp" />
+    <ClCompile Include="..\eshared\engine\sequencer.cpp" />
+    <ClCompile Include="..\eshared\opstacking\bitmapops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\demoscript.cpp" />
+    <ClCompile Include="..\eshared\opstacking\ioperator.cpp" />
+    <ClCompile Include="..\eshared\opstacking\meshops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\miscops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\modelops.cpp" />
+    <ClCompile Include="..\eshared\opstacking\parameter.cpp" />
+    <ClCompile Include="..\eshared\opstacking\sequencerops.cpp" />
+    <ClCompile Include="gui\moc_addopdlg.cpp" />
+    <ClCompile Include="gui\moc_linkopdlg.cpp" />
+    <ClCompile Include="gui\moc_mainwnd.cpp" />
+    <ClCompile Include="gui\moc_pagetree.cpp" />
+    <ClCompile Include="gui\moc_pageview.cpp" />
+    <ClCompile Include="gui\moc_paramwidgets.cpp" />
+    <ClCompile Include="gui\moc_pathview.cpp" />
+    <ClCompile Include="gui\moc_renderview.cpp" />
+    <ClCompile Include="gui\moc_timelineview.cpp" />
+    <ClCompile Include="gui\trackedit.cpp" />
+    <ClCompile Include="resources\qrc_resource.cpp" />
+    <ClCompile Include="estudio4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gui\addopdlg.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\linkopdlg.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\eshared\engine\demo.hpp" />
+    <ClInclude Include="..\eshared\engine\font.hpp" />
+    <ClInclude Include="..\eshared\engine\graphics.hpp" />
+    <ClInclude Include="..\eshared\engine\graphicsdx11.hpp" />
+    <ClInclude Include="..\eshared\engine\irenderable.hpp" />
+    <ClInclude Include="..\eshared\engine\culler.hpp" />
+    <ClInclude Include="..\eshared\engine\light.hpp" />
+    <ClInclude Include="..\eshared\engine\scene.hpp" />
+    <ClInclude Include="..\eshared\engine\scenedata.hpp" />
+    <ClInclude Include="..\eshared\engine\shaders\shaders.hpp" />
+    <ClInclude Include="..\eshared\engine\transfwidgets.hpp" />
+    <ClInclude Include="..\eshared\math\matrix.hpp" />
+    <ClInclude Include="..\eshared\math\ray.hpp" />
+    <ClInclude Include="..\eshared\math\transform.hpp" />
+    <ClInclude Include="..\eshared\math\vector.hpp" />
+    <ClInclude Include="..\eshared\opstacking\demodata.hpp" />
+    <ClInclude Include="..\eshared\opstacking\effectops.hpp" />
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\attractor.hpp" />
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\kdtree.hpp" />
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\rewritesystem.hpp" />
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\tinylsys3.hpp" />
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\turtleinterpreter.hpp" />
+    <ClInclude Include="..\eshared\opstacking\script.hpp" />
+    <CustomBuild Include="gui\mainwnd.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\pagetree.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\pageview.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\paramwidgets.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\pathview.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\renderview.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\timelineview.hpp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\eshared\packing\arith.hpp" />
+    <ClInclude Include="..\eshared\packing\bwt.hpp" />
+    <ClInclude Include="..\eshared\packing\ipacker.hpp" />
+    <ClInclude Include="..\eshared\packing\mtf.hpp" />
+    <ClInclude Include="..\eshared\packing\packing.hpp" />
+    <ClInclude Include="..\eshared\packing\rle.hpp" />
+    <ClInclude Include="..\eshared\synth\synth.hpp" />
+    <ClInclude Include="..\eshared\synth\tf4.hpp" />
+    <ClInclude Include="..\eshared\synth\tf4dx.hpp" />
+    <ClInclude Include="..\eshared\synth\tf4fx.hpp" />
+    <ClInclude Include="..\eshared\system\datastream.hpp" />
+    <ClInclude Include="..\eshared\system\file.hpp" />
+    <ClInclude Include="..\eshared\system\point.hpp" />
+    <ClInclude Include="..\eshared\system\rect.hpp" />
+    <ClInclude Include="..\eshared\system\simd.hpp" />
+    <ClInclude Include="..\eshared\system\string.hpp" />
+    <ClInclude Include="..\eshared\system\threading.hpp" />
+    <CustomBuild Include="gui\demoseqview.hpp">
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gui\paramview.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\findopdlg.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="gui\trackedit.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="gui\ui_linkopdlg.hpp" />
+    <ClInclude Include="gui\ui_mainwnd.hpp" />
+    <ClInclude Include="resources\resource.h" />
+    <ClInclude Include="..\eshared\eshared.hpp" />
+    <ClInclude Include="..\eshared\math\aabb.hpp" />
+    <ClInclude Include="..\eshared\math\math.hpp" />
+    <ClInclude Include="..\eshared\math\plane.hpp" />
+    <ClInclude Include="..\eshared\math\quat.hpp" />
+    <ClInclude Include="..\eshared\system\array.hpp" />
+    <ClInclude Include="..\eshared\system\color.hpp" />
+    <ClInclude Include="..\eshared\system\profiler.hpp" />
+    <ClInclude Include="..\eshared\system\runtime.hpp" />
+    <ClInclude Include="..\eshared\system\system.hpp" />
+    <ClInclude Include="..\eshared\system\timer.hpp" />
+    <ClInclude Include="..\eshared\system\types.hpp" />
+    <ClInclude Include="..\eshared\engine\camera.hpp" />
+    <ClInclude Include="..\eshared\engine\deferredrenderer.hpp" />
+    <ClInclude Include="..\eshared\engine\editmesh.hpp" />
+    <ClInclude Include="..\eshared\engine\effect.hpp" />
+    <ClInclude Include="..\eshared\engine\engine.hpp" />
+    <ClInclude Include="..\eshared\engine\material.hpp" />
+    <ClInclude Include="..\eshared\engine\mesh.hpp" />
+    <ClInclude Include="..\eshared\engine\particlesys.hpp" />
+    <ClInclude Include="..\eshared\engine\path.hpp" />
+    <ClInclude Include="..\eshared\engine\renderjob.hpp" />
+    <ClInclude Include="..\eshared\engine\sequencer.hpp" />
+    <ClInclude Include="..\eshared\opstacking\bitmapops.hpp" />
+    <ClInclude Include="..\eshared\opstacking\demoscript.hpp" />
+    <ClInclude Include="..\eshared\opstacking\ioperator.hpp" />
+    <ClInclude Include="..\eshared\opstacking\meshops.hpp" />
+    <ClInclude Include="..\eshared\opstacking\miscops.hpp" />
+    <ClInclude Include="..\eshared\opstacking\modelops.hpp" />
+    <ClInclude Include="..\eshared\opstacking\opmacros.hpp" />
+    <ClInclude Include="..\eshared\opstacking\oppage.hpp" />
+    <ClInclude Include="..\eshared\opstacking\opstacking.hpp" />
+    <ClInclude Include="..\eshared\opstacking\parameter.hpp" />
+    <ClInclude Include="..\eshared\opstacking\sequencerops.hpp" />
+    <ClInclude Include="..\configinfo.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_User_Interface_Compiler Include="gui\findopdlg.ui" />
+    <Qt_User_Interface_Compiler Include="gui\linkopdlg.ui" />
+    <Qt_User_Interface_Compiler Include="gui\mainwnd.ui">
+      <SubType>Designer</SubType>
+    </Qt_User_Interface_Compiler>
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_Resource_Compiler Include="resources\resource.qrc">
+      <SubType>Designer</SubType>
+    </Qt_Resource_Compiler>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\globals.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="resources\border.png" />
+    <None Include="resources\border2.png" />
+    <None Include="resources\border3.png" />
+    <None Include="resources\estudio.ico" />
+    <None Include="resources\estudio.png" />
+    <None Include="resources\estudio4.css" />
+    <None Include="resources\estudio4_debug.css" />
+    <None Include="resources\help.html" />
+    <None Include="resources\pause.png" />
+    <None Include="resources\play.png" />
+    <None Include="resources\scrollbar.png" />
+    <None Include="resources\skip_backward.png" />
+    <None Include="resources\skip_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_deferred_ambient.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_deferred_geo.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_deferred_light.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_distance.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_forward_light.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_adjust.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_blur.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_colorgrading.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_distort.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_dof.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_fog.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_fxaa.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_interference.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_merge.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_microscope.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_radialblur.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_ripple.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_space.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_ssao.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_terrain.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_nolight.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_particles.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_quad.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_shadow.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_distance.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_instanced_geo.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_nolight.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_particles.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_quad.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_shadow.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_planet.hlsl">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_adjust.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_alpha.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_blur.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_bump.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_cells.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_circle.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_color.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_distort.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_fill.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_glow.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_line.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_mask.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_merge.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_multiply.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_normals.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_perlin.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_pixels.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_rect.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_rotzoom.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_sineplasma.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_twirl.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_motionblur.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_halo.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_pixelize.hlsl">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_caustics.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_debug.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_raytrace.hlsl">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing shader minifier on %(Filename)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).hpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(ProjectDir)..\..\tools\shader_minifier.exe "  "%(FullPath)" --hlsl --preserve-all-globals -o "%(RootDir)%(Directory)%(Filename).hpp"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\qt.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

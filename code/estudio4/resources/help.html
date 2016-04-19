@@ -1,0 +1,357 @@
+<html>
+    <head>
+        <title>Enigma Studio Documentation</title>
+        <style>
+            body {
+                background-color: #202020;
+                color: #ffffff;
+            }
+            pre {
+                margin: 10px;
+                background-color: #202428;
+            }
+            table {
+                width: 95%;
+                margin: 10px;
+            }
+            td {
+                padding: 4px;
+                background-color: #202428;
+            }
+            th {
+                font-weight: bold;
+                background-color: #303030;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Enigma Studio Documentation</h1>
+        Here you will find documentation about some of the most mysterious features of this marvellous software.
+        The goal is not to have a full documentation of each and every feature, but to remind the users of the details
+        that even we as developers never seem to be able to remember, when we need them ;)
+
+		<h2>1 Working with Views</h2>
+		<h3>1.1 Using the Mouse</h3>
+		<table>
+            <tr>
+                <th align="left">LMB+drag</th>
+                <td>Scrolls a view</td>
+            </tr>
+            <tr>
+                <th align="left">RMB+drag</th>
+                <td>Selects items in a view using a selection rectangle</td>
+            </tr>
+            <tr>
+                <th align="left">LMB+ALT+drag</th>
+                <td>Zooms a view</td>
+            </tr>
+            <tr>
+                <th align="left">MMB+drag</th>
+                <td>Moves the time marker of a view (if such exists)</td>
+            </tr>
+		</table>
+		
+        <!-------------------------------------------------------------------------------
+            SHORTCUTS
+          ------------------------------------------------------------------------------->
+        <h3>1.2 Using the Keyboard</h3>
+
+        <h4>1.2.1 Viewport</h4>
+		
+        <table>
+            <tr>
+                <th align="left">W A S D</th>
+                <td>Move around in the viewport</td>
+            </tr>
+            <tr>
+                <th align="left">Shift</th>
+                <td>Accellerates viewport movements</td>
+            </tr>
+            <tr>
+                <th align="left">Tab</th>
+                <td>Toggles viewport between full screen and windowed</td>
+            </tr>
+            <tr>
+                <th align="left">R</th>
+                <td>Resets the viewport</td>
+            </tr>
+            <tr>
+                <th align="left">T</th>
+                <td>Shows bitmap tiled</td>
+            </tr>
+            <tr>
+                <th align="left">A</th>
+                <td>Visualizes bitmap's alpha channel</td>
+            </tr>
+            <tr>
+                <th align="left">+</th>
+                <td>Zooms in bitmap</td>
+            </tr>
+            <tr>
+                <th align="left">-</th>
+                <td>Zooms out bitmap</td>
+            </tr>
+            <tr>
+                <th align="left">G</th>
+                <td>Toggles grid</td>
+            </tr>
+            <tr>
+                <th align="left">N</th>
+                <td>Toggles mesh normals</td>
+            </tr>
+            <tr>
+                <th align="left">B</th>
+                <td>Toggles bounding boxes</td>
+            </tr>
+            <tr>
+                <th align="left">Y</th>
+                <td>Activates scale widget</td>
+            </tr>
+            <tr>
+                <th align="left">X</th>
+                <td>Activates rotate widget</td>
+            </tr>
+            <tr>
+                <th align="left">C</th>
+                <td>Activates translate widget</td>
+            </tr>
+            <tr>
+                <th align="left">T</th>
+                <td>Enables fixed camera for effect operators</td>
+            </tr>
+            <tr>
+                <th align="left">Z</th>
+                <td>Enables free camera for effect operators</td>
+            </tr>
+            <tr>
+                <th align="left">U</th>
+                <td>Enables linked camera for effect operators</td>
+            </tr>
+        </table>
+
+        <h4>1.2.2 Operator page view</h4>
+        <table>
+            <tr>
+                <th align="left">A</th>
+                <td>Adds a new operator</td>
+            </tr>
+            <tr>
+                <th align="left">Del</th>
+                <td>Removes the selected operators</td>
+            </tr>
+            <tr>
+                <th align="left">S</th>
+                <td>Shows the selected operator in viewport</td>
+            </tr>
+            <tr>
+                <th align="left">G</th>
+                <td>Jumps to the operator loaded by the selected <i>load</i> operator</td>
+            </tr>
+            <tr>
+                <th align="left">Ctrl+A</th>
+                <td>Selects all operators</td>
+            </tr>
+            <tr>
+                <th align="left">F</th>
+                <td>Opens a dialog to search for operators</td>
+            </tr>
+            <tr>
+                <th align="left">+</th>
+                <td>Zooms in the operator page</td>
+            </tr>
+            <tr>
+                <th align="left">-</th>
+                <td>Zooms out the operator page</td>
+            </tr>
+            <tr>
+                <th align="left">C</th>
+                <td>Copies the selected operators to clipboard</td>
+            </tr>
+            <tr>
+                <th align="left">X</th>
+                <td>Cuts the selected operators to clipboard</td>
+            </tr>
+            <tr>
+                <th align="left">V</th>
+                <td>Pastes operators from clipboard</td>
+            </tr>
+            <tr>
+                <th align="left">P</th>
+                <td>Opens the selected <i>path</i> operator in the path-editor</td>
+            </tr>
+            <tr>
+                <th align="left">Q</th>
+                <td>Opens the the selected <i>demo</i> operator in the sequencer</td>
+            </tr>
+        </table>
+
+        <h4>1.2.3 Sequencer</h4>
+		<p>
+		A <i>demo</i> operator can be loaded into the sequencer using the context menu in the operator page view or the hotkey <b>Q</b>.
+		</p>
+        <table>
+            <tr>
+                <th align="left">G</th>
+                <td>Toggles displaying gaps</td>
+            </tr>
+            <tr>
+                <th align="left">Q</th>
+                <td>Finishes editing demo and goes pack to operator page view</td>
+            </tr>
+        </table>
+
+        <h4>1.2.4 Path-editor</h4>
+		A <i>path</i> operator can be loaded into the path-editor using the context menu in the operator page view or the hotkey <b>P</b>.
+        <table>
+            <tr>
+                <th align="left">A</th>
+                <td>Adds a new key to the active sub-path at the current time</td>
+            </tr>
+            <tr>
+                <th align="left">W</th>
+                <td>Adds a new key to each sub-path at the current time</td>
+            </tr>
+            <tr>
+                <th align="left">Del</th>
+                <td>Removes the selected keys</td>
+            </tr>
+            <tr>
+                <th align="left">F</th>
+                <td>Adjusts the zoom so that the full path is visible</td>
+            </tr>
+            <tr>
+                <th align="left">C</th>
+                <td>Copies the selected keys to clipboard</td>
+            </tr>
+            <tr>
+                <th align="left">X</th>
+                <td>Cuts the selected keys to clipboard</td>
+            </tr>
+            <tr>
+                <th align="left">V</th>
+                <td>Pastes keys from the clipboard</td>
+            </tr>
+            <tr>
+                <th align="left">Ctrl+A</th>
+                <td>Selects all keys of all sub-paths</td>
+            </tr>
+            <tr>
+                <th align="left">1 2 3 4</th>
+                <td>Toggles visibility of X, Y, Z and W sub-paths</td>
+            </tr>
+            <tr>
+                <th align="left">P</th>
+                <td>Finishes editing path and goes back to operator page view</td>
+            </tr>
+            <tr>
+                <th align="left">Q</th>
+                <td>Sets the interpolation mode of the selected keys to cubic</td>
+            </tr>
+            <tr>
+                <th align="left">L</th>
+                <td>Sets the interpolation mode of the selected keys to linear</td>
+            </tr>
+            <tr>
+                <th align="left">S</th>
+                <td>Sets the interpolation mode of the selected keys to step</td>
+            </tr>
+        </table>
+        
+        <!-------------------------------------------------------------------------------
+            SCRIPT SYSTEM
+          ------------------------------------------------------------------------------->
+        <h2>2 Script System</h2>
+
+        <h3>2.1 Variables</h3>
+		In the script scalar and 4D vector variables are available. They can be declared as shown in the following. Declaration and initialization cannot be performed at the same time. Individual elements of vector variables can be accessed by appending <tt>.x</tt>, <tt>.y</tt>, <tt>.z</tt>, <tt>.w</tt> to the variable. Swizzling is currently not supported.
+        <table>
+            <tr>
+                <th align="left"><tt>scalar s;<br>s = 5.1;</tt></th>
+                <td>Declares a scalar variable <tt>s</tt> initializes it</td>
+            </tr>
+            <tr>
+				<th align="left"><tt>vector v;<br>v = [1,2,3,4];</tt></th>
+                <td>Declares a vector variable <tt>v</tt> initializes it</td>
+            </tr>
+        </table>
+		
+        <h3>2.2 Globals</h3>
+        <table>
+            <tr>
+                <th align="left"><tt>time</tt></th>
+                <td>Contains the scene time in seconds</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>time_rel</tt></th>
+                <td>Contains the relative scene time since the last rendered frame in seconds</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>audio_peak</tt></th>
+                <td>Contains the absolute amplitude peak of audio in the range [0,1]</td>
+            </tr>
+        </table>
+        <h3>2.3 Functions</h3>
+        <table>
+            <tr>
+                <th align="left"><tt>sin(x)</tt></th>
+                <td>Calculates sine for input x</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>cos(x)</tt></th>
+                <td>Calculates cosine for input x</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>sqrt(x)</tt></th>
+                <td>Calculates square root for input x</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>min(x, y)</tt></th>
+                <td>Returns the lower of the two inputs</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>max(x, y)</tt></th>
+                <td>Returns the higher of the two inputs</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>abs(x)</tt></th>
+                <td>Returns the absolute number for x</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>mod(x, y)</tt></th>
+                <td>Returns x modulo y</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>path("path", time)</tt></th>
+                <td>Evaluates the given path for a given time value</td>
+            </tr>
+            <tr>
+                <th align="left"><tt>random(min, max)</tt></th>
+                <td>Returns a random number in the given range</td>
+            </tr>
+        </table>
+        <h3>2.4 Popular examples</h3>
+        <pre>
+            // Animating perlin bitmap op
+            #Persistence = sin(time*0.5) + 2.0;
+            #Amplify = sin(time*1.5) + 3.0;
+        </pre>
+        <pre>
+            // Animating mesh multiply rotation
+            #Rotate.x = sin(time) * 0.005;
+            #Rotate.y = -0.1 + cos(time) * 0.005;
+        </pre>
+        <pre>
+            // defining and using vectors
+            vector v;
+            v = [1, 2, 3, 4];
+            #Rotate = v;
+        </pre>
+        <pre>
+            // defining and using scalars
+            scalar s;
+            s = 5;
+            #Rotate.x = s;
+        </pre>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="epack.cpp" />
+    <ClCompile Include="..\eshared\system\array.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\runtime.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\string.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\file.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\datastream.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="exepacker.cpp" />
+    <ClCompile Include="..\eshared\packing\arith.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\bwt.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\mtf.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\rle.cpp">
+      <Filter>eshared</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\eshared\system\array.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\runtime.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\string.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\system.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\types.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\file.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\datastream.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="exepacker.hpp" />
+    <ClInclude Include="pestructs.hpp" />
+    <ClInclude Include="stub.hpp" />
+    <ClInclude Include="..\eshared\packing\arith.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\ipacker.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\packing.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\bwt.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\mtf.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\rle.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="eshared">
+      <UniqueIdentifier>{e110eee8-da71-4e2e-acad-c7413dc1defd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="stub.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="stub.inc" />
+  </ItemGroup>
+</Project>

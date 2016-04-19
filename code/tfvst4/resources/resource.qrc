@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images" >
+        <file>border.png</file>
+        <file>border2.png</file>
+        <file>border3.png</file>
+        <file>scrollbar.png</file>
+    </qresource>
+    <qresource prefix=".css">
+        <file>style.css</file>
+    </qresource>
+</RCC>

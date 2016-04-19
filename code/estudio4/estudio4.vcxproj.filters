@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="gui">
+      <UniqueIdentifier>{f4208d96-4b1b-4179-9929-067c22198ca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{3d485cb6-353e-426e-bbaa-42afc1e71a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources\data">
+      <UniqueIdentifier>{0f4ea532-5067-413c-9509-b9b9b62222e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared">
+      <UniqueIdentifier>{6da6b355-fa60-497e-87bf-d5503808db1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\math">
+      <UniqueIdentifier>{d8bc8a78-0927-4e12-8ecd-cc03a63a0735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\system">
+      <UniqueIdentifier>{641a5ad5-851f-4e18-b0a2-9e881b788c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\engine">
+      <UniqueIdentifier>{75b5e3d1-75df-4320-a985-d138ee7f5644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\engine\shaders">
+      <UniqueIdentifier>{bc185bd3-506d-4a5c-8620-f75cf9caffee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\opstacking">
+      <UniqueIdentifier>{47e0125e-3d93-4830-ac7b-1161263f8731}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qtcreated">
+      <UniqueIdentifier>{6424391d-0b3f-4c5e-abd1-85d81b5e1853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\synth">
+      <UniqueIdentifier>{b74baf63-1f28-4e66-9a5d-fa25d194f3c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\opstacking\modules">
+      <UniqueIdentifier>{c6eebefa-31c7-4337-8073-9e6fdd72bf3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\packing">
+      <UniqueIdentifier>{0823adef-6ad1-4b99-92e7-60119d7305a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eshared\opstacking\modules\tinylsys3">
+      <UniqueIdentifier>{b8b845a9-5239-4dee-81d2-5170f8917626}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gui\mainwnd.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\quat.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\array.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\color.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\profiler.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\runtime.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\timer.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\camera.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\deferredrenderer.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\editmesh.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\effect.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\material.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\mesh.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\particlesys.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\path.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\renderjob.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\sequencer.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\bitmapops.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\demoscript.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\ioperator.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\meshops.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\miscops.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modelops.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\parameter.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\sequencerops.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_addopdlg.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_linkopdlg.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_mainwnd.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_pagetree.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_pageview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_paramwidgets.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_pathview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_renderview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_timelineview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\qrc_resource.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="estudio4.cpp" />
+    <ClCompile Include="gui\moc_demoseqview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\threading.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\file.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\effectops.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\demodata.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\datastream.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\string.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\light.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\engine.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\scenedata.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_paramview.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\oppage.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\script.cpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\addopdlg.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\demoseqview.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\linkopdlg.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\pagetree.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\pageview.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\paramview.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\paramwidgets.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\pathview.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\renderview.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\timelineview.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\synth\tf4.cpp">
+      <Filter>eshared\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\synth\tf4fx.cpp">
+      <Filter>eshared\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\graphicsdx11.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\transfwidgets.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\findopdlg.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_findopdlg.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\trackedit.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\moc_trackedit.cpp">
+      <Filter>qtcreated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\physicsops.cpp">
+      <Filter>eshared\opstacking\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\synth\synth.cpp">
+      <Filter>eshared\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\demo.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\arith.cpp">
+      <Filter>eshared\packing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\tinylsys3.cpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\tinylsys3ops.cpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\synth\tf4dx.cpp">
+      <Filter>eshared\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\bwt.cpp">
+      <Filter>eshared\packing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\mtf.cpp">
+      <Filter>eshared\packing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\aabb.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\plane.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\ray.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\point.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\rect.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\system\simd.cpp">
+      <Filter>eshared\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\transform.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\rewritesystem.cpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\turtleinterpreter.cpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\attractor.cpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\opstacking\modules\tinylsys3\kdtree.cpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\culler.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\matrix.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\math\vector.cpp">
+      <Filter>eshared\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\packing\rle.cpp">
+      <Filter>eshared\packing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eshared\engine\font.cpp">
+      <Filter>eshared\engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resources\resource.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\eshared.hpp">
+      <Filter>eshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\aabb.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\math.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\plane.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\quat.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\array.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\color.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\profiler.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\runtime.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\system.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\timer.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\camera.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\deferredrenderer.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\editmesh.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\effect.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\engine.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\material.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\mesh.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\particlesys.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\path.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\renderjob.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\sequencer.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\bitmapops.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\demoscript.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\ioperator.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\meshops.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\miscops.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\modelops.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\opmacros.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\oppage.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\opstacking.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\parameter.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\sequencerops.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\configinfo.hpp" />
+    <ClInclude Include="gui\ui_linkopdlg.hpp">
+      <Filter>qtcreated</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\ui_mainwnd.hpp">
+      <Filter>qtcreated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\types.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\threading.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\point.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\rect.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\file.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\ray.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\scene.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\effectops.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\demodata.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\datastream.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\string.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\light.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\shaders\shaders.hpp">
+      <Filter>eshared\engine\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\irenderable.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\scenedata.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\script.hpp">
+      <Filter>eshared\opstacking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\synth\tf4.hpp">
+      <Filter>eshared\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\synth\tf4fx.hpp">
+      <Filter>eshared\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\transform.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\graphics.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\graphicsdx11.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\system\simd.hpp">
+      <Filter>eshared\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\transfwidgets.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\synth\synth.hpp">
+      <Filter>eshared\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\demo.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\packing.hpp">
+      <Filter>eshared\packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\arith.hpp">
+      <Filter>eshared\packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\ipacker.hpp">
+      <Filter>eshared\packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\tinylsys3.hpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\rewritesystem.hpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\turtleinterpreter.hpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\attractor.hpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\opstacking\modules\tinylsys3\kdtree.hpp">
+      <Filter>eshared\opstacking\modules\tinylsys3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\synth\tf4dx.hpp">
+      <Filter>eshared\synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\bwt.hpp">
+      <Filter>eshared\packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\mtf.hpp">
+      <Filter>eshared\packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\culler.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\matrix.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\math\vector.hpp">
+      <Filter>eshared\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\packing\rle.hpp">
+      <Filter>eshared\packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eshared\engine\font.hpp">
+      <Filter>eshared\engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_User_Interface_Compiler Include="gui\mainwnd.ui">
+      <Filter>gui</Filter>
+    </Qt_User_Interface_Compiler>
+    <Qt_User_Interface_Compiler Include="gui\linkopdlg.ui">
+      <Filter>gui</Filter>
+    </Qt_User_Interface_Compiler>
+    <Qt_User_Interface_Compiler Include="gui\findopdlg.ui">
+      <Filter>gui</Filter>
+    </Qt_User_Interface_Compiler>
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_Resource_Compiler Include="resources\resource.qrc">
+      <Filter>resources</Filter>
+    </Qt_Resource_Compiler>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\estudio.ico">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\estudio.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\pause.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\play.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\skip_backward.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\skip_forward.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\border.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\border2.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\border3.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\estudio4.css">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\estudio4_debug.css">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\scrollbar.png">
+      <Filter>resources\data</Filter>
+    </None>
+    <None Include="resources\help.html">
+      <Filter>resources\data</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gui\mainwnd.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\timelineview.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\addopdlg.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\demoseqview.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\linkopdlg.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\pagetree.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\pageview.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\paramview.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\paramwidgets.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\pathview.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\renderview.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\findopdlg.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gui\trackedit.hpp">
+      <Filter>gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_deferred_geo.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_deferred_ambient.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_deferred_light.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_distance.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_forward_light.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_nolight.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_particles.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_quad.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_shadow.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_distance.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_instanced_geo.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_nolight.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_particles.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_quad.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\vs_shadow.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\globals.hlsli">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_terrain.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_adjust.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_blur.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_colorgrading.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_distort.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_dof.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_fog.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_fxaa.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_interference.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_merge.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_microscope.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_radialblur.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_ripple.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_space.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_ssao.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_adjust.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_alpha.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_blur.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_bump.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_cells.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_circle.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_color.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_distort.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_fill.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_glow.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_line.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_mask.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_merge.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_multiply.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_normals.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_perlin.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_pixels.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_rect.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_rotzoom.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_sineplasma.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_twirl.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_motionblur.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_halo.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\cs_bmp_pixelize.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_caustics.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_debug.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_raytrace.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\eshared\engine\shaders\ps_fx_planet.hlsl">
+      <Filter>eshared\engine\shaders</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\resource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

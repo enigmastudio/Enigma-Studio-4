@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Static|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static|Win32">
+      <Configuration>Release Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15898E23-17EF-4D59-A107-D194F2DF2266}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tfvst4</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(QT4DIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(QT4DIR)\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\binary\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>vst_tf4</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath);$(QT4DIR)\include;</IncludePath>
+    <LibraryPath>$(LibraryPath);$(QT4DIR)\lib;</LibraryPath>
+    <OutDir>..\..\binary\</OutDir>
+    <IntDir>release\</IntDir>
+    <EmbedManifest>true</EmbedManifest>
+    <TargetName>vst_tf4</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
+    <LibraryPath>$(LibraryPath);$(QT4DIR)\lib;</LibraryPath>
+    <IncludePath>$(IncludePath);$(QT4DIR)\include;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_WINDOWS;_USRDLL;TUNEFISH3VST_EXPORTS;eDEBUG;eUSE_SSE;eVSTI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>dsound.lib;imm32.lib;msimg32.lib;version.lib;ws2_32.lib;winmm.lib;qtguid.lib;qtcored.lib;qtxmld.lib;qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetName).dll</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_WINDOWS;_USRDLL;TUNEFISH3VST_EXPORTS;eVSTI;eUSE_SSE;eRELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OpenMPSupport>
+      </OpenMPSupport>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\$(TargetName).dll</OutputFile>
+      <AdditionalDependencies>dsound.lib;imm32.lib;msimg32.lib;version.lib;ws2_32.lib;winmm.lib;qtgui.lib;qtcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\eshared\synth\tf4.hpp" />
+    <ClInclude Include="..\eshared\synth\tf4fx.hpp" />
+    <ClInclude Include="..\eshared\system\array.hpp" />
+    <ClInclude Include="..\eshared\system\color.hpp" />
+    <ClInclude Include="..\eshared\system\datastream.hpp" />
+    <ClInclude Include="..\eshared\system\point.hpp" />
+    <ClInclude Include="..\eshared\system\profiler.hpp" />
+    <ClInclude Include="..\eshared\system\rect.hpp" />
+    <ClInclude Include="..\eshared\system\runtime.hpp" />
+    <ClInclude Include="..\eshared\system\simd.hpp" />
+    <ClInclude Include="..\eshared\system\system.hpp" />
+    <ClInclude Include="..\eshared\system\threading.hpp" />
+    <ClInclude Include="..\eshared\system\timer.hpp" />
+    <ClInclude Include="..\eshared\system\types.hpp" />
+    <CustomBuild Include="vsti\tfdial.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+    <CustomBuild Include="vsti\tffreqview.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+    <ClInclude Include="qt_winmigrate\qmfcapp.h" />
+    <CustomBuild Include="qt_winmigrate\qwinhost.h">
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+    <CustomBuild Include="qt_winmigrate\qwinwidget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">Performing moc on %(Filename).hpp</Message>
+    </CustomBuild>
+    <ClInclude Include="vsti\tfeditor.hpp" />
+    <CustomBuild Include="vsti\tfmanage.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+    <ClInclude Include="vsti\tfhelpers.hpp" />
+    <ClInclude Include="vsti\tfsynthprogram.hpp" />
+    <ClInclude Include="vsti\tfvsti.hpp" />
+    <CustomBuild Include="vsti\tfwindow.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">%(RootDir)%(Directory)moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">Performing moc on %(Filename).hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">"$(QT4DIR)\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)moc_%(Filename).cpp"</Command>
+    </CustomBuild>
+    <ClInclude Include="vsti\tfvstsynth.hpp" />
+    <ClInclude Include="vsti\ui_tfmanage.hpp" />
+    <ClInclude Include="vsti\ui_tfwindow.hpp" />
+    <ClInclude Include="vstsdk\AEffect.h" />
+    <ClInclude Include="vstsdk\aeffectx.h" />
+    <ClInclude Include="vstsdk\AEffEditor.hpp" />
+    <ClInclude Include="vstsdk\AudioEffect.hpp" />
+    <ClInclude Include="vstsdk\audioeffectx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\eshared\synth\tf4.cpp" />
+    <ClCompile Include="..\eshared\synth\tf4fx.cpp" />
+    <ClCompile Include="..\eshared\system\array.cpp" />
+    <ClCompile Include="..\eshared\system\color.cpp" />
+    <ClCompile Include="..\eshared\system\datastream.cpp" />
+    <ClCompile Include="..\eshared\system\profiler.cpp" />
+    <ClCompile Include="..\eshared\system\runtime.cpp" />
+    <ClCompile Include="..\eshared\system\simd.cpp" />
+    <ClCompile Include="..\eshared\system\threading.cpp" />
+    <ClCompile Include="..\eshared\system\timer.cpp" />
+    <ClCompile Include="qt_winmigrate\moc_qwinhost.cpp" />
+    <ClCompile Include="qt_winmigrate\moc_qwinwidget.cpp" />
+    <ClCompile Include="qt_winmigrate\qmfcapp.cpp" />
+    <ClCompile Include="qt_winmigrate\qwinhost.cpp" />
+    <ClCompile Include="qt_winmigrate\qwinwidget.cpp" />
+    <ClCompile Include="resources\qrc_resource.cpp" />
+    <ClCompile Include="vsti\main.cpp" />
+    <ClCompile Include="vsti\moc_tfdial.cpp" />
+    <ClCompile Include="vsti\moc_tffreqview.cpp" />
+    <ClCompile Include="vsti\moc_tfmanage.cpp" />
+    <ClCompile Include="vsti\moc_tfwindow.cpp" />
+    <ClCompile Include="vsti\tfeditor.cpp" />
+    <ClCompile Include="vsti\tfhelpers.cpp" />
+    <ClCompile Include="vsti\tfmanage.cpp" />
+    <ClInclude Include="vsti\tfrecorder.hpp" />
+    <ClCompile Include="vsti\tfdial.cpp" />
+    <ClCompile Include="vsti\tffreqview.cpp" />
+    <ClCompile Include="vsti\tfrecorder.cpp" />
+    <ClCompile Include="vsti\tfsynthprogram.cpp" />
+    <ClCompile Include="vsti\tfvstsynth.cpp" />
+    <ClCompile Include="vsti\tfwindow.cpp" />
+    <ClCompile Include="vstsdk\AudioEffect.cpp" />
+    <ClCompile Include="vstsdk\audioeffectx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_User_Interface_Compiler Include="vsti\tfmanage.ui" />
+    <Qt_User_Interface_Compiler Include="vsti\tfwindow.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\border.png" />
+    <None Include="resources\border2.png" />
+    <None Include="resources\border3.png" />
+    <None Include="resources\scrollbar.png" />
+    <None Include="resources\style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Qt_Resource_Compiler Include="resources\resource.qrc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\qt.targets" />
+  </ImportGroup>
+</Project>

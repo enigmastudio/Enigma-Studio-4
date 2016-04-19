@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tfvst4", "tfvst4.vcxproj", "{15898E23-17EF-4D59-A107-D194F2DF2266}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tfplayer4", "..\tfplayer4\tfplayer4.vcxproj", "{45FEBD86-4419-4376-94ED-4BEFCCDA0D2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15898E23-17EF-4D59-A107-D194F2DF2266}.Debug|Win32.ActiveCfg = Debug|Win32
+		{15898E23-17EF-4D59-A107-D194F2DF2266}.Debug|Win32.Build.0 = Debug|Win32
+		{15898E23-17EF-4D59-A107-D194F2DF2266}.Release|Win32.ActiveCfg = Release Static|Win32
+		{15898E23-17EF-4D59-A107-D194F2DF2266}.Release|Win32.Build.0 = Release Static|Win32
+		{45FEBD86-4419-4376-94ED-4BEFCCDA0D2E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{45FEBD86-4419-4376-94ED-4BEFCCDA0D2E}.Debug|Win32.Build.0 = Debug|Win32
+		{45FEBD86-4419-4376-94ED-4BEFCCDA0D2E}.Release|Win32.ActiveCfg = Release|Win32
+		{45FEBD86-4419-4376-94ED-4BEFCCDA0D2E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
